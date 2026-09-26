@@ -5,7 +5,9 @@ import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import { Heading } from "./components/Heading";
 import { Oscar as Oscars } from "./components/Oscar";
-import {Status} from "./components/Status"
+import {Status} from "./components/Status";
+import { Button } from "./components/Button";
+import { InputElement } from "./components/Input";
 
 function App() {
   const personDetails = {
@@ -58,6 +60,12 @@ function App() {
         <Heading>This is heading children props</Heading>
       </Oscars>
       <Status status = "success" />
+      <Button handleClick = {(event, id)=>{
+        console.log(event.type , id)
+      }}/>
+      <InputElement handleChange={(event)=>{
+        console.log(event)
+      }} value=" " />
     </>
   );
 }
