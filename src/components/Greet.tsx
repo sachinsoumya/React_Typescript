@@ -1,11 +1,14 @@
 type GreetProps = {
-  message: string;
+  message: string,
+  messageCount:number,
+  isLoggedIn:boolean
 };
 
 const Greet = (props: GreetProps) => {
+  const {message , messageCount , isLoggedIn} = props
   return (
     <div>
-      <p>Hello , {props.message}</p>
+      {isLoggedIn ? <p>Hello , {message} and {messageCount}</p> : <p> User not logged in yet</p> }
     </div>
   );
 };
