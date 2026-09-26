@@ -1,5 +1,6 @@
 type personListProps = {
   personLists: {
+    _id:number;
     name: string;
     age: number;
     address: string;
@@ -11,19 +12,30 @@ const PersonList = ({ personLists }: personListProps) => {
     personLists && (
       <div>
         <table>
-          <tr>
-            <th>name</th>
-            <th>age</th>
-            <th>address</th>
-          </tr>
-
-          {personLists.map((item) => (
-            <tr style={ item.age >60 ?{backgroundColor:'red'} : {backgroundColor :'white'}}>
-              <td>{item.name}</td>
-              <td>{item.age}</td>
-              <td>{item.address}</td>
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>age</th>
+              <th>address</th>
             </tr>
-          ))}
+          </thead>
+
+          <tbody>
+            {personLists.map((item) => (
+              <tr
+                style={
+                  item.age > 60
+                    ? { backgroundColor: "red" }
+                    : { backgroundColor: "white" }
+                }
+                key={item._id}
+              >
+                <td>{item.name}</td>
+                <td>{item.age}</td>
+                <td>{item.address}</td>
+              </tr>
+            ))}
+          </tbody>
         </table>
       </div>
     )

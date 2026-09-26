@@ -1,3 +1,4 @@
 - Vite + React install
 - Typing props (string , number , boolean , objects , array)
 - using Type
+- React children props types.(<Oscar> <Heading>This is children prop</Heading></Oscar>)
