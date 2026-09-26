@@ -5,6 +5,7 @@ import Person from "./components/Person";
 import PersonList from "./components/PersonList";
 import { Heading } from "./components/Heading";
 import { Oscar as Oscars } from "./components/Oscar";
+import {Status} from "./components/Status"
 
 function App() {
   const personDetails = {
@@ -46,8 +47,8 @@ function App() {
       <h1>Welcome to Vite+React</h1>
       <Greet
         message="Good evening ! How are you"
-        messageCount={10}
-        isLoggedIn={false}
+      
+        isLoggedIn={true}
       />
       <Person details={personDetails} />
       <PersonList personLists={personList} />
@@ -56,6 +57,7 @@ function App() {
         {" "}
         <Heading>This is heading children props</Heading>
       </Oscars>
+      <Status status = "success" />
     </>
   );
 }
