@@ -3,4 +3,6 @@
 - using Type
 - React children props types.(<Oscar> <Heading>This is children prop</Heading></Oscar>)
 - Unions ( | ) of string literals , Children props , optional props.
-- Event Props types(onChange , onClick)
+- Event Props types(onChange , onClick);
+- Adding style Props type.
+- Created Separate .ts file(Person.types.ts) for reusability of prop type.
