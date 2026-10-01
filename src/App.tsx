@@ -9,6 +9,7 @@ import { Status } from "./components/Status";
 import { Button } from "./components/Button";
 import { InputElement } from "./components/Input";
 import { Container } from "./components/Container";
+import { User } from "./components/states/User";
 
 function App() {
   const personDetails = {
@@ -69,6 +70,7 @@ function App() {
         value=" "
       />
       <Container styles={{ padding: "3px", backgroundColor: "pink" }} />
+      <User />
     </>
   );
 }

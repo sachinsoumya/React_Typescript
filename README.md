@@ -6,3 +6,5 @@
 - Event Props types(onChange , onClick);
 - Adding style Props type.
 - Created Separate .ts file(Person.types.ts) for reusability of prop type.
+- Type of useState() hook with initial value and future value using  | operator (<User | null>(null))
+- Type assertion using "as" keyword(<User>({} as User))
